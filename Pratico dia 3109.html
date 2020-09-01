@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+    <p id="resultado"></p>
+    <input type="text" id="valor1"> 
+    <input type="text" id="valor2"> 
+    <button onclick="somar()">somar</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="divi()">divi</button>
+    <button onclick="multi()">multi</button>
+    <p id="bar"></p>
+    <input placeholder="Idade" id="idade">
+    <input placeholder="Sexo" id="sexo">
+    <button onclick="verifica()"> Enviar</button>
+
+
+        <script>
+            
+         function somar(){
+            let x = document.getElementById("valor1").value;
+            let y = document.getElementById("valor2").value;
+            document.getElementById("resultado").innerHTML = parseInt(x) + parseInt(y);
+         }
+         function sub(){
+            let x = document.getElementById("valor1").value;
+            let y = document.getElementById("valor2").value;
+            document.getElementById("resultado").innerHTML = parseInt(x) - parseInt(y);
+         }
+         function multi(){
+            let x = document.getElementById("valor1").value;
+            let y = document.getElementById("valor2").value;
+            document.getElementById("resultado").innerHTML = parseInt(x) * parseInt(y);
+         }
+         function div(){
+            let x = document.getElementById("valor1").value;
+            let y = document.getElementById("valor2").value;
+            document.getElementById("resultado").innerHTML = parseInt(x) / parseInt(y);
+         }
+
+         function pares(){
+            var cont = 1;
+            while (cont <= 100 ){
+                let resto = cont%2;
+                if(resto == 0){
+                    console.log(cont);
+
+                }
+                cont++;
+            }
+         }
+         pares();
+
+         function verifica(){
+            let x = document.getElementById("idade").value;
+            let y = document.getElementById("sexo").value;
+            if(y == "masculino" && parseInt(x) >= 18 ){
+                document.getElementById("bar").innerHTML = "Pode entrar no bar com taxa";
+            }else if( y == "masculino" && parseInt(x) < 18  ){
+                ocument.getElementById("bar").innerHTML = "Não pode entrar";
+            }else if(y == "feminino" && parseInt(x) >= 18 ){
+                ocument.getElementById("bar").innerHTML = "Pode entrar no bar sem taxa";
+            }else{
+                ocument.getElementById("bar").innerHTML = "Não pode entrar";
+            }
+         }
+        </script>
+        
+</body>
+</html>
