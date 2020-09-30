@@ -9,6 +9,7 @@
   "author": "Lucas Henrick Serpa de Oliveira",
   "license": "ISC",
   "dependencies": {
+    "consign": "^0.1.6",
     "express": "^4.17.1",
     "express-generator": "^4.16.1"
   }
